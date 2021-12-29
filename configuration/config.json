@@ -1,0 +1,44 @@
+{
+    "bot": {
+        "prefix": ">",
+        "command": {
+            "deleteAfterExecuted": {
+                "enabled": true,
+                "miliseccond": 3000                
+            },
+            "track": {
+                "interval":{
+                    "miliseccond": 30000
+                },
+                "deleteAfterExecuted": {
+                    "enabled": true,
+                    "miliseccond": 30000
+                }           
+            }
+        }
+    },
+    "message": {
+        "command": {
+            "embed": {
+                "checkWaybill": {
+                    "color": "ffc800", 
+                    "title": "Check Waybill, SiCepat - {waybill_number}",               
+                    "description": "▪️\nHey {user}, this is the status of your last order package of {waybill_number} \n```{status}```",
+                    "footer": {
+                        "text": "your package status"                           
+                    }                
+                },
+                "commandsError": {
+                    "color": "ffc800", 
+                    "title": "Something went wrong!",               
+                    "description": "▪️\nHey {user}, something is wrong, here the message \n```{causedError}```",                   
+                    "footer": {
+                        "text": "Failed to run command"                              
+                    }                
+                }    
+            },            
+            "notFound": "Command not found!",
+            "error": "` Error executing command! `"
+        }
+    }
+}
